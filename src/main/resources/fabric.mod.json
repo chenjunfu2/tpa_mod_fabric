@@ -1,15 +1,14 @@
 {
 	"schemaVersion": 1,
-	"id": "tpa-mod",
+	"id": "chenjunfu2-tpa-mod",
 	"version": "${version}",
 	"name": "TPA Mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "A mod that allows players to teleport between each other!",
 	"authors": [
-		"Me!"
+		"chenjunfu2"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/chenjunfu2/tpa_mod_fabric/"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/tpa-mod/icon.png",
