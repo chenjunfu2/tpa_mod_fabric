@@ -17,22 +17,31 @@
 
 请求传送到玩家
 
+<br>
+
 /tpahere [player]
 
 请求玩家传送到自己
+
+<br>
 
 /tpaccept [player]/[]
 
 接受 指定玩家/最后一个玩家 对你发送的请求
 
+<br>
+
 /tpacancel [player]/[]
 
 取消自己对 指定玩家/最后一个玩家 的请求
+
+<br>
 
 /tpadeny [player]/[]
 
 拒绝 指定玩家/最后一个玩家 对你发送的请求
 
+<br>
 
 ## 其他信息：
 
