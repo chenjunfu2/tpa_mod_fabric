@@ -1,4 +1,6 @@
-# tpa_mod_fabric：一个Minecraft-1.21玩家之间传送mod
+# tpa_mod_fabric
+
+一个Minecraft-1.21玩家之间传送mod
 
 只需服务端安装，目前只支持中文
 
