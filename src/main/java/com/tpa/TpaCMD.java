@@ -265,15 +265,15 @@ public class TpaCMD
 		
 		//根据传送方向初始化值
 		ServerPlayerEntity from, to;
-		if (dir == TpDirection.TPA_MODE)
-		{
-			from = source;
-			to = target;
-		}
-		else if (dir == TpDirection.TPAHERE_MODE)
+		if (dir == TpDirection.TPA_MODE)//source是accept的执行者，tpa模式的传送目标
 		{
 			from = target;
 			to = source;
+		}
+		else if (dir == TpDirection.TPAHERE_MODE)//source是accept的执行者，tpahere模式的传送者
+		{
+			from = source;
+			to = target;
 		}
 		else
 		{
