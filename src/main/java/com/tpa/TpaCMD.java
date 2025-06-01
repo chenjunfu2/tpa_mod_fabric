@@ -162,6 +162,7 @@ public class TpaCMD
 			return 0;
 		}
 		
+		server.sendMessage(Text.literal(String.format("%s请求传送到%s身边",source.getName().getString(),target.getName().getString())));
 		source.sendMessage(Text.literal(String.format("§a已向%s发出传送请求", target.getName().getString())));
 		target.sendMessage(Text.literal(String.format("§e%s请求传送到你身边", source.getName().getString())));
 		
@@ -191,6 +192,7 @@ public class TpaCMD
 			return 0;
 		}
 		
+		server.sendMessage(Text.literal(String.format("%s请求%s传送到他身边",source.getName().getString(),target.getName().getString())));
 		source.sendMessage(Text.literal(String.format("§a已向%s发出传送请求", target.getName().getString())));
 		target.sendMessage(Text.literal(String.format("§e%s请求你传送到他身边", source.getName().getString())));
 		
@@ -223,6 +225,7 @@ public class TpaCMD
 			return 0;
 		}
 		
+		server.sendMessage(Text.literal(String.format("%s取消了向%s发出的请求",source.getName().getString(),target.getName().getString())));
 		source.sendMessage(Text.literal(String.format("§a已取消向%s发出的请求", target.getName().getString())));
 		target.sendMessage(Text.literal(String.format("§e%s取消了传送请求", source.getName().getString())));
 		
@@ -296,6 +299,9 @@ public class TpaCMD
 		from.teleport(targetWorld, to.getX(), to.getY(), to.getZ(), positionFlags, from.getYaw(), from.getPitch());
 		
 		//发送消息
+		server.sendMessage(Text.literal(String.format("%s同意了%s的请求，已将%s传送到%s",
+				source.getName().getString(),target.getName().getString(),
+				from.getName().getString(),to.getName().getString())));
 		from.sendMessage(Text.literal(String.format("已传送到%s身边", to.getName().getString())));
 		to.sendMessage(Text.literal(String.format("%s已传送到你身边", from.getName().getString())));
 		
@@ -328,6 +334,7 @@ public class TpaCMD
 			return 0;
 		}
 		
+		server.sendMessage(Text.literal(String.format("%s拒绝了%s的请求",source.getName().getString(),target.getName().getString())));
 		source.sendMessage(Text.literal(String.format("§a已拒绝%s向你发出的请求", target.getName().getString())));
 		target.sendMessage(Text.literal(String.format("§e%s拒绝了你的传送请求", source.getName().getString())));
 		
