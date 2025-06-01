@@ -220,11 +220,14 @@ public class TPARequest
 	
 	private static void handleTimeout(PlayerData source,PlayerData target)
 	{
-		// 通知双方玩家
+		//获取玩家实体
 		var ps = source.getServerPlayerEntity();
 		var pt = target.getServerPlayerEntity();
 		
+		//服务器打印
+		server.sendMessage(Text.literal(String.format("%s发给%s的请求已超时过期",source.getName(),target.getName())));
 		
+		// 通知双方玩家
 		if (ps != null && !ps.isDisconnected())
 		{
 			ps.sendMessage(Text.literal(String.format("§c你向%s发送的传送请求已超时",target.getName())));
