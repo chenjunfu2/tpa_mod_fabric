@@ -11,6 +11,7 @@ import com.mojang.brigadier.suggestion.SuggestionProvider;
 import com.mojang.brigadier.suggestion.Suggestions;
 import com.mojang.brigadier.suggestion.SuggestionsBuilder;
 import net.minecraft.network.packet.s2c.play.PositionFlag;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.command.CommandManager;
@@ -282,7 +283,12 @@ public class TpaCMD
 		}
 		
 		//进行传送
-		ServerWorld targetWorld = to.getServer().getWorld(to.getWorld().getRegistryKey());
+		MinecraftServer tmps = to.getServer();
+		if(tmps == null)
+		{
+			return 0;
+		}
+		ServerWorld targetWorld = tmps.getWorld(to.getWorld().getRegistryKey());
 		Set<PositionFlag> positionFlags = new HashSet<>();
 		positionFlags.add(PositionFlag.X);
 		positionFlags.add(PositionFlag.Y);
